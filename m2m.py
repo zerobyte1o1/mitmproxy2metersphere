@@ -1,7 +1,17 @@
 import json
+import os
 import asyncio
+import sys
+
 from mitmproxy import options
 from mitmproxy.tools import dump
+
+
+def clear_window():
+    if sys.platform.startswith('darwin'):
+        os.system('clear')
+    else:
+        os.system('cls')
 
 
 class Mitmproxy2Meersphere:
@@ -31,8 +41,22 @@ class Mitmproxy2Meersphere:
 
     def load(self, loader):
         # 在这里使用input()函数接受参数
-        self.url = input('请输入想要捕获接口的公共路由：')
-        self.json_file_name = 'mit2meter.json'
+        clear_window()
+        self.url = input('\n\033[1mPlease enter the keyword：')
+        clear_window()
+        print('\n\033[1m* Locking keywords：\033[0m'+self.url)
+        print('\033[1m\033[32m* Listening to localhost:8083\033[0m')
+        print('\033[1m----------------------------------------------\033[0m')
+        if getattr(sys, 'frozen', False):
+            # 打包后的可执行文件
+            working_dir = os.path.dirname(sys.executable)
+        else:
+            # 源代码
+            working_dir = os.path.dirname(os.path.abspath(__file__))
+
+        # 使用绝对路径来指定文件的位置
+        self.json_file_name = os.path.join(working_dir, 'mit2meter.json')
+
         with open(self.json_file_name, 'w') as f:
             json.dump(self.origin_json, f)
             f.close()
@@ -40,7 +64,7 @@ class Mitmproxy2Meersphere:
     def request(self, flow):
         if self.url in flow.request.url:
             if flow.request.url not in self.urls:
-                print('已录入：' + flow.request.url)
+                print('\033[1;32;43m> Entry:\033[0m ' + flow.request.url)
                 self.urls.append(flow.request.url)
                 last_word_with_params = flow.request.url.split('/')[-1]
                 name = last_word_with_params.split('?')[-1]
