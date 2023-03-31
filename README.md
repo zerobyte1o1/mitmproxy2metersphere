@@ -114,10 +114,9 @@ Mac 下双击 mitmproxy-ca-cert.pem 即可弹出钥匙串管理页面，然后�
 
 ## 捕获接口
 
-- 
-entry后为录入的接口
+- entry后为录入的接口
 
-![](https://secure2.wostatic.cn/static/hpqJi44rswFpJXZhDmY1LL/image.png?auth_key=1680252363-aMDqcyxw1j6rwE43EVEsnq-0-dc405def5e8ce827c88e46f017c8cf0d)
+  ![](https://secure2.wostatic.cn/static/hpqJi44rswFpJXZhDmY1LL/image.png?auth_key=1680252363-aMDqcyxw1j6rwE43EVEsnq-0-dc405def5e8ce827c88e46f017c8cf0d)
 
     m2m会在同目录实时生成json文件mitm2meter.json，该文件为持续覆盖状态，再次开启m2m会覆盖这个文件，若需要保存上次的录制，请将上次的mitm2meter.json文件转移至其他目录。
 
