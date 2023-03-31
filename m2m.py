@@ -42,7 +42,7 @@ class Mitmproxy2Meersphere:
     def load(self, loader):
         # 在这里使用input()函数接受参数
         clear_window()
-        self.url = input('\n\033[1mPlease enter the keyword：')
+        self.url = input('\n\033[1mPlease enter the keyword：').strip()
         clear_window()
         print('\n\033[1m* Locking keywords：\033[0m'+self.url)
         print('\033[1m\033[32m* Listening to localhost:8083\033[0m')
