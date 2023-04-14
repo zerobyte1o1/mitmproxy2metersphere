@@ -1,3 +1,33 @@
+- 启动后默认锁定graphql关键字，可以更改后点击update keywoeds按钮更新关键字
+
+[图片]
+
+- Update Keywoeds按钮
+    - 点击后会根据输入框的文字更新监听关键字。
+    - 点击后会删除json之前的所有内容，重新写入。
+- Entry按钮
+    - 未点击状态，只会监听当前过滤的接口并显示，并不会录入到mitm2mester.json文件中
+
+[图片]
+  - 点击Entry按钮后，按钮会变成蓝色，之后捕获的接口会存入mitm2meter.json文件中
+
+[图片]
+
+- 启动后默认锁定graphql关键字，可以更改后点击update keywoeds按钮更新关键字
+
+[图片]
+
+- Update Keywoeds按钮
+    - 点击后会根据输入框的文字更新监听关键字。
+    - 点击后会删除json之前的所有内容，重新写入。
+- Entry按钮
+    - 未点击状态，只会监听当前过滤的接口并显示，并不会录入到mitm2mester.json文件中
+
+[图片]
+  - 点击Entry按钮后，按钮会变成蓝色，之后捕获的接口会存入mitm2meter.json文件中
+
+[图片]
+
 # 编写原因
 
 ---
@@ -22,67 +52,75 @@
 
 
 
-![](https://secure2.wostatic.cn/static/tLRhYwzMFXid2Gb6imL6MY/image.png?auth_key=1680252012-sZfqeg3erCgbsm2n6SEKn9-0-5bf54fff4d7418f1fab99555a5c6309e)
+![](https://secure2.wostatic.cn/static/tLRhYwzMFXid2Gb6imL6MY/image.png?auth_key=1681457350-6NBJzZ4pUMJc4Env5LGE2U-0-e89e9afb0d61f6fecc73a4667f21e605)
 
 ## 安装并配置SwitchyOmega
 
 - 安装SwitchyOmega
 以chrome为例：打开扩展模式后，下载[https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?hl=zh-CN](https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?hl=zh-CN)
 
-    ![](https://secure2.wostatic.cn/static/9YKV5ySjAcXUh81bzBygDR/image.png?auth_key=1680252012-4LHy3t2W9VCqAVZer3BMxB-0-4b4165285f7a5b42b37072a3ef30ca66)
+    ![](https://secure2.wostatic.cn/static/9YKV5ySjAcXUh81bzBygDR/image.png?auth_key=1681457350-9Q3hERwf2x5nWUaP9Nt5g7-0-40335fdd7443931e46ecce819e7cb18d)
 - 配置SwitchyOmega
 点击选项。
 
-    ![](https://secure2.wostatic.cn/static/xyikS32VaPCK4PMLhhyNqY/image.png?auth_key=1680252012-3ropEgH1LsaGKNobaUf8vG-0-f80426de4301d1f664a7c66b4db9bf7c)
+    ![](https://secure2.wostatic.cn/static/xyikS32VaPCK4PMLhhyNqY/image.png?auth_key=1681457350-upYTzGVLYEQvY5f9817DVa-0-c1fa2ff66ef29f56f57c3cfd76a6ad33)
 
     创建情景模式
 
-    ![](https://secure2.wostatic.cn/static/cxCHQXrBFZXR2UhaTT2xoJ/image.png?auth_key=1680252012-tDfZ6eQ879L1dN7fhfpGEn-0-fa55efe4c89508a0a0a08deb82481166)
+    ![](https://secure2.wostatic.cn/static/cxCHQXrBFZXR2UhaTT2xoJ/image.png?auth_key=1681457350-mWvkjk4MP6QAQedZLgsALw-0-a06441cd9bc703baf51dad13d7b22698)
 
     输入如下内容并保存
 
-    ![](https://secure2.wostatic.cn/static/v5SUR38zRNcs1w6KXqf1oH/image.png?auth_key=1680252012-4TU341agraae8TLQyvfduY-0-825305d8219088514bb3e7835b3057b9)
+    ![](https://secure2.wostatic.cn/static/v5SUR38zRNcs1w6KXqf1oH/image.png?auth_key=1681457350-qPbn7NHrCwEfyz7oWL41bG-0-3ccfae573915305fb3fce66324a3c33d)
 
 ## 运行m2m
 
 - 双击启动m2m
 失败场景1：
 
-    ![](https://secure2.wostatic.cn/static/gYrCxEJ7mN4Ska4qns9eCS/1680238494062.jpg?auth_key=1680252012-wCo9gbsn5DS2EyrGc4zyLy-0-9f467cd5e6877bb86b72c63d849abdcf)
+    ![](https://secure2.wostatic.cn/static/gYrCxEJ7mN4Ska4qns9eCS/1680238494062.jpg?auth_key=1681457350-ic1hEJxbzk9PjVDKVq8xU2-0-0f9036b5d6281a6fa21b0fc322f1bcfe)
 
     解决方法1：
 
-    ![](https://secure2.wostatic.cn/static/9VyiGenYQz4SATZKDDwk4Z/image.png?auth_key=1680252012-gdkS3oqxLsEz5mY9EWmH3s-0-9424e3ed564baf47781cb7e8b502f9b9)
+    ![](https://secure2.wostatic.cn/static/9VyiGenYQz4SATZKDDwk4Z/image.png?auth_key=1681457350-fweiG5Nn8u43BN4wAtj3bZ-0-be48123c4d675aeabc536cdb865fabfa)
 
     失败场景2：
 
-    ![](https://secure2.wostatic.cn/static/7bFJfoTVEQLRcU7pb44BKR/image.png?auth_key=1680252012-xrjaD7VdiL4Cc3PWVuVVEK-0-b2906321c47efcda0b0530f30b71698a)
+    ![](https://secure2.wostatic.cn/static/7bFJfoTVEQLRcU7pb44BKR/image.png?auth_key=1681457350-rx4qHkva3uxC89AbW5za8S-0-ca2d707a4bb6e3bc0dd53ccc8140c5dc)
 
     解决方法2：
 
     用chmod 777 文件名赋予文件可执行权限
 
-    ![](https://secure2.wostatic.cn/static/feMUmp3kCycTa81L7tC99p/image.png?auth_key=1680252012-kGywS9vSTjQY2KA4gcGLnd-0-7323070103bffa3df4d542b65286478b)
-
-    启动后输入想要过滤的url内容，回车
-
-
-
-    ![](https://secure2.wostatic.cn/static/ngTGbTyr9a76KRy4NEZ2wu/image.png?auth_key=1680252012-6dJU66vCEBCuQiZVExZL3u-0-ae51e24963cfe23052acd3aeec06a313)
-
-    ![](https://secure2.wostatic.cn/static/pzykDfCo8eU7oAc4by3p5E/image.png?auth_key=1680252012-eXwKLYhQrnQWSmNnHGsfXa-0-6035c973e08c93a8168e0767e8fa681c)
+    ![](https://secure2.wostatic.cn/static/feMUmp3kCycTa81L7tC99p/image.png?auth_key=1681457350-5pGGWrqmPU2S7iaSSE6RWw-0-283dde6cb8488c8bbb28b766bef4c426)
 
     到这个界面时代表监听已打开8083端口
 
+    - 启动后默认锁定graphql关键字，可以更改后点击update keywoeds按钮更新关键字
+
+    ![](https://teletraan.feishu.cn/space/api/box/stream/download/asynccode/?code=NWYwYjY2ZmRhMWRhYjdmMWJjN2Y1YWU2YzU2MTdmYzZfM29vUEpvR2lHcE9IRWpGVmRXY0FBOGprcEl4bnBWV3hfVG9rZW46QTFqRmJRMTBCb1l3MEN4YVZDR2NoUlhqbk1oXzE2ODE0NTczODQ6MTY4MTQ2MDk4NF9WNA)
+
+    - Update Keywoeds按钮
+        - 点击后会根据输入框的文字更新监听关键字。
+        - 点击后会删除json之前的所有内容，重新写入。
+    - Entry按钮
+        - 未点击状态，只会监听当前过滤的接口并显示，并不会录入到mitm2mester.json文件中
+
+        ![](https://teletraan.feishu.cn/space/api/box/stream/download/asynccode/?code=MDZlZTg1YzIzMzM1ZTE2MjJhMzEzYzQzMjlmYmNjODhfZUQ4bUNoRlFUUkR0RUVNYTIzekVEMGo2UlpMczg5V0lfVG9rZW46UFRNYWJkT0pZb0o0Vmh4a3d3S2NHWk9vblBoXzE2ODE0NTczODQ6MTY4MTQ2MDk4NF9WNA)
+
+        - 点击Entry按钮后，按钮会变成蓝色，之后捕获的接口会存入mitm2meter.json文件中
+
+        ![](https://teletraan.feishu.cn/space/api/box/stream/download/asynccode/?code=YmMxYTUyNjRmZDE2NmY0OGE2M2IxZGVkZmViM2NkOTVfSnZmbXpVTG5udWFGWFFWRTBXZGhiUlBSc0ZEalRUYmRfVG9rZW46TjN0eGJFeTA0b2ZvQld4ZWtSY2NkdGt6bjdnXzE2ODE0NTczODQ6MTY4MTQ2MDk4NF9WNA)
+
     打开浏览器代理
 
-    ![](https://secure2.wostatic.cn/static/fJYPVfQtpoYLQ59312juPM/image.png?auth_key=1680252012-nrnZCR1WBS2BF8Jsitz2LS-0-138906f6d54a737f3ad5b07dbdc7e086)
+    ![](https://secure2.wostatic.cn/static/fJYPVfQtpoYLQ59312juPM/image.png?auth_key=1681457350-kfsQ5MuTFp4JUCrxTdYaiM-0-e4f39087f3f5fdd73da25a725a9178fe)
 
 ## 安装证书（首次）
 
 在开启了m2m以及浏览器代理之后，在输入框输入mitm.it
 
-![](https://secure2.wostatic.cn/static/fZZpdF8GXYh7Uc6WUJGimj/image.png?auth_key=1680252013-2bDAaY9k9P6oZA56eQfc5d-0-892b5f85263c85f5c18abcf786b8fe0b)
+![](https://secure2.wostatic.cn/static/fZZpdF8GXYh7Uc6WUJGimj/image.png?auth_key=1681457350-9cj2ncG9gzfRcg6wJvme1C-0-d222d53e5724b3bdb541c07269d683ef)
 
 根据系统不同get不同的证书
 
@@ -90,33 +128,34 @@
 
 
 
-    ![](https://secure2.wostatic.cn/static/4nVnvKDVJKXzKBaLb8YPye/image.png?auth_key=1680252013-8TpdQmM1gvDDRvkF2GEnNq-0-dfad4ef1c1b5d9ddb088847e720ee91b)
+    ![](https://secure2.wostatic.cn/static/4nVnvKDVJKXzKBaLb8YPye/image.png?auth_key=1681457350-ePAGF1qR1KHvqdaGBJDbo5-0-ca94fd2f722122a9d7f8287b9aac8ba9)
 
     双击mitmproxy-ca.p12进入导入证书的页面，点击“下一步”
 
-    ![](https://secure2.wostatic.cn/static/cDJvbXFDsS96jTAvcjt7sY/image.png?auth_key=1680252013-qSNVnUBTTQXwo1b8RM46g-0-1da3a3e02399109f9af71c7f416af89a)
+    ![](https://secure2.wostatic.cn/static/cDJvbXFDsS96jTAvcjt7sY/image.png?auth_key=1681457350-j6LxdmFsc3rMU6mJNbqvKY-0-19dc7a2838a9de9c80fb9f085e0b60fe)
 
     不用输入密码，直接“下一步”
 
-    ![](https://secure2.wostatic.cn/static/2UkjZEfmaf6XGNTc1VFzPh/image.png?auth_key=1680252013-6wzkWrPrCguBZYTv2794v6-0-90e8d0c2b2efc20700d371a12a40de51)
+    ![](https://secure2.wostatic.cn/static/2UkjZEfmaf6XGNTc1VFzPh/image.png?auth_key=1681457350-bcRLqF5cVFAq72GQLGopuv-0-11629c99dc18f6b3810475734fc66a9c)
 
     选择“将所有的证书都放入下列存储”，接着选择“受信任的根证书颁发机构”
 
-    ![](https://secure2.wostatic.cn/static/6HpEQPEeEog1aYq9ux2E5S/image.png?auth_key=1680252013-2Twh7cYLhFSKaq21d88Csd-0-4068672a445c96f061b1a596a14ed38d)
+    ![](https://secure2.wostatic.cn/static/6HpEQPEeEog1aYq9ux2E5S/image.png?auth_key=1681457350-azoDSUksDQfsFwGAoQDQcD-0-c01151f6cc7e28ee6599329bfb3f1545)
 
     最后，弹出警告窗口，直接点击“是”
 
-    ![](https://secure2.wostatic.cn/static/sCeeji2z728zFfkogD15X7/image.png?auth_key=1680252013-pLrgeqt7QtZABfxv82eQ3W-0-0cfa71b8449fe9f2c7b8e4b070725775)
+    ![](https://secure2.wostatic.cn/static/sCeeji2z728zFfkogD15X7/image.png?auth_key=1681457350-uyXr2GGUpcAZPXv8Ev7Fc6-0-154ecba3c7f3a9500c2765789ae1f001)
 - mac
 Mac 下双击 mitmproxy-ca-cert.pem 即可弹出钥匙串管理页面，然后找到 mitmproxy 证书，点击打开其设置选项，选择始终信任即可
 
-    ![](https://secure2.wostatic.cn/static/hi3Shkt1YA2D2ZafCowT1t/image.png?auth_key=1680252013-rim4P7WRFQ341iHiTTJBkj-0-63655f339b909194e0cc3ea7ad4ed76d)
+    ![](https://secure2.wostatic.cn/static/hi3Shkt1YA2D2ZafCowT1t/image.png?auth_key=1681457350-sVbc45tBen1Ndh8TJPQk3Q-0-c13bf4c84f6aba432fb36f05f3c06ae5)
 
 ## 捕获接口
 
-- entry后为录入的接口
+- 
+entry后为录入的接口
 
-  ![](https://secure2.wostatic.cn/static/hpqJi44rswFpJXZhDmY1LL/image.png?auth_key=1680252363-aMDqcyxw1j6rwE43EVEsnq-0-dc405def5e8ce827c88e46f017c8cf0d)
+    ![](https://secure2.wostatic.cn/static/hpqJi44rswFpJXZhDmY1LL/image.png?auth_key=1681457350-8v43zqWLMdRVhhJeRDT4SW-0-21992af18bd6b140e79f4c1ca4f654c8)
 
     m2m会在同目录实时生成json文件mitm2meter.json，该文件为持续覆盖状态，再次开启m2m会覆盖这个文件，若需要保存上次的录制，请将上次的mitm2meter.json文件转移至其他目录。
 
@@ -126,4 +165,5 @@ Mac 下双击 mitmproxy-ca-cert.pem 即可弹出钥匙串管理页面，然后�
 
 > 接口测试→接口定义→更多操作→导入→格式选择Metersphere上传mitm2meter.json文件点击保存即可
 
-，
+
+

@@ -1,3 +1,4 @@
+import platform
 import threading
 from kivy.clock import Clock
 from kivy.app import App
@@ -12,7 +13,8 @@ import sys
 from mitmproxy import options
 from mitmproxy.tools import dump
 
-class Mitmproxy2Meersphere:
+
+class Mitmproxy2Metersphere:
     origin_json = {
         "projectId": "",
         "data": [
@@ -42,15 +44,21 @@ class Mitmproxy2Meersphere:
 
         # 在这里使用input()函数接受参数
 
-        if getattr(sys, 'frozen', False):
-            # 打包后的可执行文件
-            working_dir = os.path.dirname(sys.executable)
-        else:
-            # 源代码
-            working_dir = os.path.dirname(os.path.abspath(__file__))
+        # if getattr(sys, 'frozen', False):
+        #     # 打包后的可执行文件
+        #     working_dir = os.path.dirname(sys.executable)
+        # else:
+        #     # 源代码
+        #     working_dir = os.path.dirname(os.path.abspath(__file__))
+        os_type = platform.system()
+        # 获取桌面路径
+        if os_type == 'Darwin':  # 如果是Mac系统
+            desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
+        elif os_type == 'Windows':  # 如果是Windows系统
+            desktop_path = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
 
         # 使用绝对路径来指定文件的位置
-        self.json_file_name = os.path.join(working_dir, 'mit2meter.json')
+        self.json_file_name = os.path.join(desktop_path, 'mit2meter.json')
 
         with open(self.json_file_name, 'w') as f:
             json.dump(self.origin_json, f)
@@ -96,7 +104,7 @@ async def start_proxy(host, port):
         with_termlog=False,
         with_dumper=False,
     )
-    master.addons.add(Mitmproxy2Meersphere())
+    master.addons.add(Mitmproxy2Metersphere())
 
     await master.run()
     return master
@@ -128,16 +136,22 @@ class MyApp(App):
                                     font_size="25sp",
                                     size_hint_x=0.6,
                                     padding_y=20,
-                                    foreground_color=[0,0,0,0.8])
-        Middle.info_desk = '* Cleared history and locking keywords: ' + Middle.keyword + '\n'
-        Middle.info_desk += '* Listening to localhost: 8083\n'
+                                    foreground_color=[0, 0, 0, 0.8])
+        Middle.info_desk = '\n* Listening to localhost: 8083\n'
+        Middle.info_desk += '* Cleared history and locking keywords: ' + Middle.keyword + '\n'
+
         Middle.info_desk += '-------------------------------------------------------------' \
                             '-----------------------------------------------------\n'
         hb.add_widget(self.text_input)
-        button = Button(text='change keywords\nor\nclear', size_hint_x=0.2, halign='center')
+        button = Button(text='Update Keywords',
+                        size_hint_x=0.2,
+                        halign='center')
         button.bind(on_press=self.change_keyword)
         hb.add_widget(button)
-        toggle_button = ToggleButton(text='Entry', group='record', size_hint_x=0.2)
+        toggle_button = ToggleButton(text='Entry',
+                                     group='record',
+                                     bold=True,
+                                     size_hint_x=0.2)
         toggle_button.bind(on_press=self.toggle_record)
         hb.add_widget(toggle_button)
 
@@ -146,7 +160,7 @@ class MyApp(App):
                                          font_size='16sp',
                                          readonly=True,
                                          cursor_blink=False,
-                                         foreground_color=[0,0,0,0.7]
+                                         foreground_color=[0, 0, 0, 0.7]
                                          )
         vb.add_widget(self.real_time_label)
         superBox = BoxLayout(orientation='vertical')  # 定义盒子，并设置内部的部件水平排列
@@ -163,8 +177,9 @@ class MyApp(App):
     def change_keyword(self, instance):
         Middle.keyword = self.text_input.text
         Middle.new_status = True
-        Middle.info_desk = '* Cleared history and locking keywords: ' + Middle.keyword + '\n'
-        Middle.info_desk += '* Listening to localhost: 8083\n'
+        Middle.info_desk = '\n* Listening to localhost: 8083\n'
+        Middle.info_desk += '* Cleared history and locking keywords: ' + Middle.keyword + '\n'
+
         Middle.info_desk += '-------------------------------------------------------------' \
                             '-----------------------------------------------------\n'
 

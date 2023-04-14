@@ -1,0 +1,3 @@
+([('viewm2m',
+   '/Users/liufangjing/PycharmProjects/mitmproxy2metersphere/dist/viewm2m',
+   'EXECUTABLE')],)
