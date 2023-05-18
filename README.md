@@ -20,7 +20,7 @@
 
 - m2m提供了三个版本，m2m_m，m2m_i，m2m.exe，分别对应mac M芯片，mac Inter芯片，windows x64三个版本，对应使用的电脑开启响应版本。
 
-
+- 现已上传pypi，可以直接通过命令行 pip install viewm2m 下载，命令行viewm2m可直接运行。
 
 ![](https://secure2.wostatic.cn/static/tLRhYwzMFXid2Gb6imL6MY/image.png?auth_key=1681868014-axR5exhfz92zKV87hS63vZ-0-5b0ea666065d5c00f4b5fad5a1ed51e9)
 
